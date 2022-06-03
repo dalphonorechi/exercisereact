@@ -1,6 +1,24 @@
-# Getting Started with Create React App
+# An Exercise tracker app
+
+This was Inspired by one of [FreeCodeCamp](https://FreeCodeCamp.org)'s exercises. 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+The Backend can be found [here](https://github.com/dalphonorechi/exerciserapp)
+
+It uses React.js framework.
+
+Home page
+![Home](/screenshots/home.jpg "Home")
+
+Create user page
+![Create](/screenshots/createuser.jpg "Create")
+
+All users
+![All Users](/screenshots/allusers.jpg "All users")
+
+User Exercises
+![User Exercises](/screenshots/userexercises.jpg "User Exercises")
 
 ## Available Scripts
 
