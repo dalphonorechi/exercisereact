@@ -1,0 +1,68 @@
+import { Divider } from "@mui/material";
+import React from "react";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
+
+const Container = styled.div`
+  display: flex;
+  height: 20vh;
+  width: 100%;
+  flex-direction: column;
+`;
+const Wrapper = styled.div`
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+`;
+const Left = styled.div`
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+`;
+const Logo = styled.p`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  color: white;
+  font-size: 24px;
+`;
+const Right = styled.div`
+  flex: 1;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+`;
+const Item = styled(Link)`
+  padding: 5px;
+  cursor: pointer;
+  margin-left: 5px;
+  text-decoration: none;
+  color: white;
+`;
+
+const Navbar = () => {
+  return (
+    <Container>
+      <Wrapper>
+        <Left>
+          <Logo>EXERCIFY</Logo>
+        </Left>
+        <Right>
+          <Item to={"/createuser"}>Create User</Item>
+          <Item to={"/allusers"}>All Users</Item>
+        </Right>
+      </Wrapper>
+      <Divider
+        sx={{
+          backgroundColor: "white",
+          margin: "5px",
+        }}
+      />
+    </Container>
+  );
+};
+
+export default Navbar;
