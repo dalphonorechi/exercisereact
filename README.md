@@ -1,6 +1,6 @@
 # An Exercise tracker app
 
-This was Inspired by one of [FreeCodeCamp](https://FreeCodeCamp.org)'s exercises. 
+This was Inspired by one of [FreeCodeCamp Exercise Tracker](https://www.freecodecamp.org/learn/back-end-development-and-apis/back-end-development-and-apis-projects/exercise-tracker)'s exercises. 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
