@@ -2,6 +2,8 @@ import { Divider } from "@mui/material";
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { useSelector, useDispatch } from "react-redux";
+import { selectAllUser, selectCreateUser } from "../feature/PageIndicatorSlice";
 
 const Container = styled.div`
   display: flex;
@@ -40,10 +42,15 @@ const Item = styled(Link)`
   cursor: pointer;
   margin-left: 5px;
   text-decoration: none;
-  color: white;
+  border-radius: 2px;
+  color: ${(props) => (props.onSelected === "white" ? "#ff7518" : "white")};
+  background-color: ${(props) => props.onSelected};
 `;
 
 const Navbar = () => {
+  const count = useSelector((state) => state.indicator.value);
+  console.log(count);
+  const dispatch = useDispatch();
   return (
     <Container>
       <Wrapper>
@@ -51,8 +58,20 @@ const Navbar = () => {
           <Logo>EXERCIFY</Logo>
         </Left>
         <Right>
-          <Item to={"/createuser"}>Create User</Item>
-          <Item to={"/allusers"}>All Users</Item>
+          <Item
+            onClick={() => dispatch(selectCreateUser())}
+            onSelected={count === 1 ? "white" : "#ff7518"}
+            to={"/createuser"}
+          >
+            Create User
+          </Item>
+          <Item
+            onClick={() => dispatch(selectAllUser())}
+            onSelected={count === 2 ? "white" : "#ff7518"}
+            to={"/allusers"}
+          >
+            All Users
+          </Item>
         </Right>
       </Wrapper>
       <Divider

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import TextField from "@mui/material/TextField";
-import { Button, CircularProgress } from "@mui/material";
+import { CircularProgress } from "@mui/material";
 import axios from "axios";
 import { useNavigate } from "react-router";
 
@@ -21,6 +21,7 @@ const Wrapper = styled.div`
   height: 100%;
   width: 100%;
   background-color: #ff7518;
+
 `;
 
 const Create = styled.button`
@@ -43,18 +44,15 @@ function CreateUser() {
         username: user,
       })
       .then((response) => {
-        console.log(response);
         setLoading(false);
         navigate("/allusers");
       })
       .catch((e) => {
-        console.log(e);
         setLoading(false);
       });
   }
   function handleChange(e) {
     setUser(e.target.value);
-    console.log(e.target.value);
   }
   return (
     <Container>

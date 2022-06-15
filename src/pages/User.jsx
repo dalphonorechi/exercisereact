@@ -138,12 +138,12 @@ const User = () => {
         `http://localhost:3001/api/users/${location.id}/logs?from=2005-05-01&to=2220-05-01&limit=30`
       )
       .then((response) => {
-        console.log(response);
+      
         setUser(response.data);
         setLoading(false);
       })
       .catch((e) => {
-        console.log(e);
+        
         setLoading(false);
       });
   };
