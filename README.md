@@ -4,7 +4,7 @@ This was Inspired by one of [FreeCodeCamp Exercise Tracker](https://www.freecode
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-The Backend can be found [here](https://github.com/dalphonorechi/exerciserapp)
+The Backend can be found [here](https://github.com/dalphonorechi/exerciseapp)
 
 It uses React.js framework.
 
